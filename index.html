@@ -2,20 +2,47 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>eSIM 一鍵安裝</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 40px; }
-    button { padding: 15px 30px; font-size: 18px; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      text-align: center;
+      padding: 60px 20px;
+      background: #f9f9f9;
+    }
+    a.install-button {
+      display: inline-block;
+      padding: 15px 40px;
+      font-size: 20px;
+      color: white;
+      background-color: #007aff;
+      border-radius: 8px;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      margin-top: 30px;
+    }
+    a.install-button:active {
+      background-color: #0051a8;
+    }
   </style>
 </head>
 <body>
-  <h1>點擊下方按鈕安裝 eSIM</h1>
-  <button onclick="installEsim()">立即安裝 eSIM</button>
+  <h1>點擊下方按鈕安裝 eSIM !</h1>
+
+  <a
+    class="install-button"
+    href="LPA:1$rsp1.cmlink.com$54C2156B64A24C2286E890C4BBF1B23F"
+  >
+    立即安裝 eSIM
+  </a>
 
   <script>
-    function installEsim() {
-      window.location.href = "LPA:1$rsp1.cmlink.com$54C2156B64A24C2286E890C4BBF1B23F";
+    // 可選：提示用戶需用真機 Safari 打開，因為模擬器及非支援裝置無法啟動
+    if (!navigator.userAgent.includes('iPhone')) {
+      alert('此功能僅限在 iPhone Safari 瀏覽器使用，並需支援 eSIM');
     }
   </script>
 </body>
